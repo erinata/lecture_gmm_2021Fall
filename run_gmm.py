@@ -47,11 +47,27 @@ def run_gmm(n, data):
 	return silhouette
 
 
-kmeans_silhouette = run_kmeans(3, data)
-gmm_silhouette = run_gmm(3, data)
+# kmeans_silhouette = run_kmeans(3, data)
+# gmm_silhouette = run_gmm(3, data)
 
-print(kmeans_silhouette)
-print(gmm_silhouette)
+# print(kmeans_silhouette)
+# print(gmm_silhouette)
+
+
+kmeans_silhouette_list = [ run_kmeans(i+1, data) for i in range(7)]
+print(kmeans_silhouette_list)
+
+gmm_silhouette_list = [ run_gmm(i+1, data) for i in range(7)]
+print(gmm_silhouette_list)
+
+
+
+
+
+
+
+
+
 
 
 
